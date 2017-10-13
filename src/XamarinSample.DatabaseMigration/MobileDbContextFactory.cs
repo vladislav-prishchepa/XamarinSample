@@ -10,6 +10,6 @@ namespace XamarinSample.DatabaseMigration
     [UsedImplicitly]
     public class MobileDbContextFactory : IDesignTimeDbContextFactory<MobileDbContext>
     {
-        public MobileDbContext CreateDbContext(string[] args) => new MobileDbContext();
+        public MobileDbContext CreateDbContext(string[] args) => new MobileDbContext("TestDatabase.db");
     }
 }

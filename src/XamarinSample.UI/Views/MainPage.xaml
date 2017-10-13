@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vms="clr-namespace:XamarinSample.UI.ViewModels"
+             x:Class="XamarinSample.UI.Views.MainPage"
+             Appearing="MainPage_OnAppearing"
+             Disappearing="MainPage_OnDisappearing">
+    <ContentPage.BindingContext>
+        <vms:MainPageViewModel x:Name="ViewModel"></vms:MainPageViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms .NET Standard 2.0!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand">
+            </Label>
+            <Button Command="{Binding ResheshCommand}"
+                    Text="Refresh">
+            </Button>
+            <ListView ItemsSource="{Binding Tasks}"
+                      SelectedItem="{Binding SelectedTask, Mode=TwoWay}"
+                      IsPullToRefreshEnabled="True"
+                      RefreshCommand="{Binding ResheshCommand}" 
+                      IsEnabled="{Binding IsLoading, Mode=OneWay, Converter={StaticResource InverseBoolConverter}}">
+                <ListView.Header>
+                    <Label HorizontalOptions="Center"
+                           Text="Task list"></Label>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Title}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Command="{Binding ShowInfoCommand}"
+                    Text="ShowInfo">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

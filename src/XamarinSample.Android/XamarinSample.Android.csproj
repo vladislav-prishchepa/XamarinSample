@@ -52,6 +52,12 @@
     <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.4.0.282\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
     </Reference>
+    <Reference Include="ITCC.Logging.Core, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ITCC.Logging.Core.3.0.0\lib\netstandard1.3\ITCC.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ITCC.UI, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ITCC.UI.3.0.0\lib\netstandard1.3\ITCC.UI.dll</HintPath>
+    </Reference>
     <Reference Include="JetBrains.Annotations, Version=11.0.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
       <HintPath>..\..\packages\JetBrains.Annotations.11.0.0\lib\netstandard1.0\JetBrains.Annotations.dll</HintPath>
     </Reference>
@@ -220,6 +226,10 @@
     <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\XamarinSample.Core\XamarinSample.Core.csproj">
+      <Project>{8a784b6a-797e-4fed-90ca-984ea0faa172}</Project>
+      <Name>XamarinSample.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\XamarinSample.UI\XamarinSample.UI.csproj">
       <Project>{33a4f03a-1fce-4009-9907-4650e83c7661}</Project>
       <Name>XamarinSample.UI</Name>

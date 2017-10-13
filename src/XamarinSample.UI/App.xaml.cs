@@ -1,6 +1,8 @@
 ﻿// This is an independent project of an individual developer. Dear PVS-Studio, please check it.
 // PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
 
+using ITCC.Logging.Core;
+using ITCC.Logging.Core.Loggers;
 using Xamarin.Forms;
 
 namespace XamarinSample.UI
@@ -10,9 +12,11 @@ namespace XamarinSample.UI
     {
         public App()
         {
-            InitializeComponent();
+            Logger.Level = LogLevel.Trace;
+            Logger.RegisterReceiver(new DebugLogger(LogLevel.Trace));
 
-            MainPage = new MainPage();
+            InitializeComponent();
+            MainPage = new Views.MainPage();
         }
 
         protected override void OnStart()
