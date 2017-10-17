@@ -11,7 +11,7 @@ using Windows.UI.Xaml.Navigation;
 namespace XamarinSample.UWP
 {
     // ReSharper disable once RedundantExtendsListEntry
-    internal sealed partial class App : Application
+    sealed partial class App : Application
     {
         public App()
         {

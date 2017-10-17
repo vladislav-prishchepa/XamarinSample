@@ -2,6 +2,8 @@
   "dependencies": {
     "ITCC.Logging.Core": "3.0.0",
     "JetBrains.Annotations": "11.0.0",
+    "Microsoft.EntityFrameworkCore": "2.0.0",
+    "Microsoft.EntityFrameworkCore.Sqlite": "2.0.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
     "Xamarin.Forms": "2.4.0.282"
   },
